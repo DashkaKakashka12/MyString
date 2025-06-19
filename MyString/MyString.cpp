@@ -65,6 +65,7 @@ int main()
 	MyString str2("World");
 
 	MyString result;
+	MyString result56;
 
 	cout << "-----" << endl;
 	cout << "Hi";
