@@ -100,7 +100,6 @@ int main()
 
 	MyString result;
 	result = str + str2;
-
-
+	
 	return 0;
 }
