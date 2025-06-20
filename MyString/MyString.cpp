@@ -101,19 +101,5 @@ int main()
 	MyString result;
 	result = str + str2;
 
-	MyString result56;
-
-	cout << "-----" << endl;
-	cout << "Hi";
-
-	str = str2;
-
-
-
-
-
-
-
-
 	return 0;
 }
