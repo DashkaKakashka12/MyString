@@ -47,11 +47,30 @@ public:
 		return*this;
 	}
 
-	/*MyString operator +(const MyString& other) {
+	 MyString operator +(const MyString& other) {
+
 	 MyString newStr;
-	 int thislenght = strlen(this.str);
-	 newStr.str = new
-	}*/
+
+	 int thislenght = strlen(this->str);
+	 int otherlenght = strlen(other.str);
+	 newStr.str = new char[thislenght + otherlenght + 1];
+	 int i = 0;
+
+	 for (; i < thislenght; i++)
+	 {
+		newStr.str[i] = this->str[i];
+	 }
+
+	 for (int t = 0; t < otherlenght; t++,i++)
+	 {
+		 newStr.str[i] = other.str[t];
+
+	 }
+
+	 newStr.str[thislenght + otherlenght] = '\0';
+
+	 return newStr;
+	}
 
 private:
 	char* str;
@@ -64,14 +83,10 @@ int main()
 	MyString str("Hello");
 	MyString str2("World");
 
+	//str = str2;
+
 	MyString result;
-	MyString result56;
-
-	cout << "-----" << endl;
-	cout << "Hi";
-
-	str = str2;
-
+	result = str + str2;
 
 
 	return 0;
