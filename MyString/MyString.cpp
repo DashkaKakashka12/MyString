@@ -69,10 +69,9 @@ int main()
 
 	cout << "-----" << endl;
 	cout << "Hi";
+	cout << "delete";
 
 	str = str2;
-
-
-
+	
 	return 0;
 }
