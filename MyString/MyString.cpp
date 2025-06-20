@@ -9,6 +9,8 @@ public:
 		str = nullptr;
 	}
 
+
+
 	MyString(const char* str) {
 		int length = strlen(str);
 		this->str = new char[length + 1];
@@ -18,7 +20,6 @@ public:
 		}
 
 		this->str[length] = '\0';
-
 	}
 
 	~MyString() {
@@ -28,6 +29,18 @@ public:
 
 	void Print() {
 		cout << "Текст: " << str << endl;
+	}
+
+
+	MyString(const MyString& other) {
+		int length = strlen(other.str);
+		this->str = new char[length + 1];
+		for (int i = 0; i < length; i++)
+		{
+			this->str[i] = other.str[i];
+		}
+
+		this->str[length] = '\0';
 	}
 
 	MyString& operator = (const MyString& other) {
